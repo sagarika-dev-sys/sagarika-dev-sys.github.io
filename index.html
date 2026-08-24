@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagarika Sahoo - Homepage</title>
+    
+    <!-- Modern, High-Contrast Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Base Setup */
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #231812; /* Deep Espresso Brown - high contrast */
+            text-align: center;
+            min-height: 100vh;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* 2. Silk Background Setup */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg-leaves.jpg'); /* Make sure this matches your image filename */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(4px) brightness(0.98); /* Light blur */
+            transform: scale(1.03);
+            z-index: -1;
+        }
+
+        /* 3. Heading */
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            color: #1a100a;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        /* 4. Frosted Glass Top Navigation */
+        .nav-links {
+            margin: 20px 0 35px 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.65); /* Frosted aesthetic */
+            color: #3d261a;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(60, 35, 20, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.25s ease;
+        }
+
+        .nav-btn:hover {
+            background: #a45a38; /* Warm terracotta on hover */
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(164, 90, 56, 0.3);
+        }
+
+        /* 5. Main Content Card (Guarantees Sharp Contrast) */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 35px 30px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 12px 35px rgba(60, 35, 20, 0.08);
+            flex-wrap: wrap;
+        }
+
+        /* 6. Profile Avatar */
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 25px rgba(60, 35, 20, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.04);
+        }
+
+        /* 7. Stats Content */
+        .stats-box {
+            text-align: left;
+            max-width: 360px;
+        }
+
+        .stats-box h2 {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #1a100a;
+            margin: 0 0 10px 0;
+        }
+
+        .stats-box p {
+            font-size: 0.98em;
+            line-height: 1.6;
+            color: #3e2d24;
+            margin: 0 0 12px 0;
+        }
+
+        .stats-list {
+            margin: 10px 0;
+            padding-left: 0;
+            list-style: none;
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #2b1c14;
+            font-weight: 500;
+        }
+
+        .stats-list li {
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .stats-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #a45a38;
+            font-weight: bold;
+        }
+
+        /* 8. Terracotta Accent Resume Button */
+        .resume-btn {
+            display: inline-block;
+            background: #a45a38;
+            color: #ffffff;
+            padding: 11px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-top: 10px;
+            box-shadow: 0 6px 18px rgba(164, 90, 56, 0.28);
+            transition: all 0.25s ease;
+        }
+
+        .resume-btn:hover {
+            background: #8b4525;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(164, 90, 56, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Sagarika's Homepage</h1>
+
+    <!-- TOP NAVIGATION BUTTONS -->
+    <div class="nav-links">
+        <a href="https://leetcode.com/u/2gCMVQXFLg/" target="_blank" class="nav-btn">LeetCode</a>
+        <a href="https://www.codechef.com/users/saggy_2006" target="_blank" class="nav-btn">CodeChef</a>
+        <a href="https://codeforces.com/profile/saggy_2006" target="_blank" class="nav-btn">Codeforces</a>
+        <a href="https://github.com/saggy-2006" target="_blank" class="nav-btn">GitHub</a>
+    </div>
+
+    <!-- MAIN TWO-COLUMN SECTION -->
+    <div class="container">
+        
+        <img src="profile.jpg" alt="Sagarika Sahoo" class="profile-img">
+
+        <div class="stats-box">
+            <h2>My Coding Journey</h2>
+            <p>I am a student passionate about competitive programming in C and C++.</p>
+            
+            <ul class="stats-list">
+                <li><strong>160+</strong> Solved on LeetCode</li>
+                <li><strong>75+</strong> Active Days Streak</li>
+                <li><strong>1-Star</strong> CodeChef Coder</li>
+            </ul>
+            
+            <a href="resume.pdf" target="_blank" class="resume-btn">View Resume ↗</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
